@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class TasksTest {
 
     public WebDriver acessarAplicacao() {
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "\\src\\test\\resources\\drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.navigate().to("http://localhost:8001/tasks");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
